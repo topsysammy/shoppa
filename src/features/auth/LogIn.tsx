@@ -1,22 +1,20 @@
 import { useState, type FormEvent } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
 import { supabase } from '@/lib/supabase/client';
 import { authMessage } from '@/lib/supabase/errors';
-import { keys, session } from '@/lib/storage';
 import { useOnline } from '@/lib/useOnline';
 import { useOAuth } from './oauth';
 import { appleEnabled, AuthLayout, FormError, OfflineNote, OrDivider, PasswordInput, SocialButton, Spacer, TextLink } from './ui';
 
 /** Screen 07 Log in. Wrong credentials show on the password field, as in Figma. */
 export function LogIn() {
-  const navigate = useNavigate();
   const location = useLocation();
   const from = (location.state as { from?: string } | null)?.from;
   const online = useOnline();
   const oauth = useOAuth(from ?? '/home');
-  const [email, setEmail] = useState(() => session.get(keys.pendingEmail) ?? '');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [busy, setBusy] = useState(false);
   const [fieldError, setFieldError] = useState('');
@@ -31,11 +29,6 @@ export function LogIn() {
     const { error: err } = await supabase.auth.signInWithPassword({ email: email.trim(), password });
     setBusy(false);
     if (!err) return; // RedirectIfAuthed sends the user on once the session lands.
-    if (err.code === 'email_not_confirmed') {
-      session.set(keys.pendingEmail, email.trim());
-      await supabase.auth.resend({ type: 'signup', email: email.trim() });
-      return navigate('/verify', { state: { ...(location.state as object), email: email.trim() } });
-    }
     if (err.code === 'invalid_credentials') return setFieldError(authMessage(err));
     setError(authMessage(err));
   };

@@ -49,7 +49,6 @@ export const session = {
 
 export const keys = {
   onboarded: 'shoppa.onboarded',
-  pendingEmail: 'shoppa.pendingEmail',
   storagePersist: 'shoppa.storagePersist',
   storageWarned: 'shoppa.storageWarned',
   pushPromptDismissed: 'shoppa.pushPromptDismissed',

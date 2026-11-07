@@ -15,7 +15,7 @@ const SignUp = lazy(() => import('@/features/auth/SignUp').then((m) => ({ defaul
 const LogIn = lazy(() => import('@/features/auth/LogIn').then((m) => ({ default: m.LogIn })));
 const ForgotPassword = lazy(() => import('@/features/auth/ForgotPassword').then((m) => ({ default: m.ForgotPassword })));
 const ResetPassword = lazy(() => import('@/features/auth/ResetPassword').then((m) => ({ default: m.ResetPassword })));
-const VerifyEmail = lazy(() => import('@/features/auth/VerifyEmail').then((m) => ({ default: m.VerifyEmail })));
+const AccountCreated = lazy(() => import('@/features/auth/AccountCreated').then((m) => ({ default: m.AccountCreated })));
 const AuthConfirm = lazy(() => import('@/features/auth/AuthConfirm').then((m) => ({ default: m.AuthConfirm })));
 const HomePage = lazy(() => import('@/features/lists/HomePage').then((m) => ({ default: m.HomePage })));
 const ListsPage = lazy(() => import('@/features/lists/ListsPage').then((m) => ({ default: m.ListsPage })));
@@ -61,12 +61,13 @@ export function App() {
       <AuthProvider>
         <Suspense fallback={<div className="min-h-dvh canvas-gradient" aria-busy="true" />}>
           <Routes>
-            {/* Onboarding and auth, screens 01 to 12 */}
+            {/* Onboarding and auth, screens 01 to 12 (11 Verify email removed) */}
             <Route path="/" element={loggedOut(<Start />)} />
             <Route path="/signup" element={loggedOut(<SignUp />)} />
             <Route path="/login" element={loggedOut(<LogIn />)} />
             <Route path="/forgot" element={loggedOut(<ForgotPassword />)} />
-            <Route path="/verify" element={<RequireConfig><VerifyEmail /></RequireConfig>} />
+            <Route path="/welcome" element={<RequireConfig><AccountCreated /></RequireConfig>} />
+            <Route path="/verify" element={<Navigate to="/welcome" replace />} />
             <Route path="/reset" element={<RequireConfig><ResetPassword /></RequireConfig>} />
             <Route path="/auth/confirm" element={<RequireConfig><AuthConfirm /></RequireConfig>} />
             <Route path="/legal/:doc" element={<LegalPage />} />

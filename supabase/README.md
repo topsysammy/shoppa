@@ -40,14 +40,14 @@ soft-deleted rows is scheduled automatically. If you enable it later, run:
   - `https://shoppa.app/**`
 
 **Sign In / Providers > Email**
-- Enable email provider, **Confirm email: on** (A7).
+- Enable email provider, **Confirm email: off**. Sign-up signs people straight in; the verify-email
+  screen (11, PRD A7) was removed by the product owner, so sign-up sends no email.
 - Email OTP length: **6**. Email OTP expiration: **1800** seconds (screen 09 says "expires in 30 minutes").
 - Password: minimum length **8**, required characters **letters and digits** (matches the sign-up rule).
 - Secure password change: on.
 
 **Email Templates** (free plan: only after you set up custom SMTP) — the links point at `/auth/confirm` with a `token_hash`, so a link opened in another
 browser or on another device still works (A7).
-- Confirm signup: paste `templates/confirm-signup.html`, subject `Your Shoppa code is {{ .Token }}`.
 - Reset Password: paste `templates/reset-password.html`, subject `Reset your Shoppa password`.
 
 **Google (A2)**

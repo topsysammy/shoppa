@@ -2,9 +2,8 @@ import { useState, type FormEvent } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { Button } from '@/components/Button';
 import { Input } from '@/components/Input';
-import { appUrl, supabase } from '@/lib/supabase/client';
+import { supabase } from '@/lib/supabase/client';
 import { authMessage } from '@/lib/supabase/errors';
-import { keys, session } from '@/lib/storage';
 import { useOnline } from '@/lib/useOnline';
 import { useOAuth } from './oauth';
 import {
@@ -50,14 +49,12 @@ export function SignUp() {
     setError('');
     if (!name.trim() || !emailOk(email) || !rules.length || !rules.number) return;
     setBusy(true);
+    // No verification email: Supabase "Confirm email" is off, so sign-up
+    // returns a session straight away (screen 11 removed, see AccountCreated).
     const { data, error: err } = await supabase.auth.signUp({
       email: email.trim(),
       password,
-      options: {
-        data: { display_name: name.trim() },
-        // A7: the emailed link opens the web app and lands on Home.
-        emailRedirectTo: appUrl(from ?? '/home'),
-      },
+      options: { data: { display_name: name.trim() } },
     });
     setBusy(false);
     if (err) return setError(authMessage(err));
@@ -65,9 +62,8 @@ export function SignUp() {
     if (data.user && data.user.identities?.length === 0) {
       return setError('An account with this email already exists. Try signing in.');
     }
-    session.set(keys.pendingEmail, email.trim());
-    if (data.session) navigate('/verify?done=1', { replace: true, state: location.state });
-    else navigate('/verify', { state: { ...(location.state as object), email: email.trim() } });
+    if (!data.session) return setError('Your account was created. Sign in to continue.');
+    navigate('/welcome', { replace: true, state: location.state });
   };
 
   return (

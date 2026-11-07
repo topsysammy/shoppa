@@ -1,7 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Avatar, avatarTones, type AvatarTone } from '@/components/Avatar';
-import { Badge } from '@/components/Badge';
 import { Button } from '@/components/Button';
 import { Icon } from '@/components/icons/Icon';
 import { Input } from '@/components/Input';
@@ -81,7 +80,6 @@ export function EditProfilePage() {
           value={user?.email ?? ''}
           readOnly
           helper="Change it under Account."
-          trailing={user?.email_confirmed_at ? <Badge label="Verified" tone="done" className="mr-2.5" /> : undefined}
         />
         <div className="mt-auto pt-6">
           <Button type="submit" disabled={!name.trim()}>

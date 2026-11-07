@@ -4,7 +4,6 @@ import type { EmailOtpType } from '@supabase/supabase-js';
 import { Logo } from '@/components/Logo';
 import { supabase } from '@/lib/supabase/client';
 import { authMessage } from '@/lib/supabase/errors';
-import { keys, session } from '@/lib/storage';
 import { Button } from '@/components/Button';
 import { AuthLayout, Spacer, TextLink } from './ui';
 
@@ -14,7 +13,7 @@ const allowed: EmailOtpType[] = ['email', 'signup', 'recovery', 'email_change', 
  * /auth/confirm?token_hash=…&type=…&next=… — target of the links in the
  * Supabase email templates (supabase/templates). Using token_hash works even
  * when the email is opened in a different browser from the one that signed up.
- * A7: a verified sign-up link lands on Home; a recovery link opens screen 10.
+ * Used for password-reset and email-change links; a recovery link opens screen 10.
  */
 export function AuthConfirm() {
   const [params] = useSearchParams();
@@ -34,7 +33,6 @@ export function AuthConfirm() {
     }
     void supabase.auth.verifyOtp({ token_hash: tokenHash, type }).then(({ error: err }) => {
       if (err) return setError(authMessage(err));
-      session.remove(keys.pendingEmail);
       // `next` is a path, or the full emailRedirectTo URL on this origin.
       let safeNext: string | null = null;
       if (next) {
