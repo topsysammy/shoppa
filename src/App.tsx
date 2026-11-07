@@ -4,6 +4,8 @@ import { AppShell } from '@/features/shell/AppShell';
 import { NotFound } from '@/features/shell/NotFound';
 import { AuthProvider } from '@/features/auth/AuthProvider';
 import { RedirectIfAuthed, RequireAuth, RequireConfig } from '@/features/auth/guards';
+import { ErrorBoundary } from '@/components/ErrorBoundary';
+import { UpdateToast } from '@/features/shell/UpdateToast';
 
 
 // Lazy routes keep the signed-in app shell small (PRD: initial JS under 200KB).
@@ -54,6 +56,7 @@ const loggedOut = (el: ReactNode) => <RedirectIfAuthed>{el}</RedirectIfAuthed>;
 /** Route table from PRD section 5. W9: every route deep-links (host rewrites to index.html). */
 export function App() {
   return (
+    <ErrorBoundary>
     <BrowserRouter>
       <AuthProvider>
         <Suspense fallback={<div className="min-h-dvh canvas-gradient" aria-busy="true" />}>
@@ -102,7 +105,10 @@ export function App() {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>
+        {/* W4: shown on every screen, including sign-in, so a new version always reaches the user */}
+        <UpdateToast />
       </AuthProvider>
     </BrowserRouter>
+    </ErrorBoundary>
   );
 }

@@ -15,16 +15,18 @@ export function Start() {
   const [firstVisit] = useState(() => local.get(keys.onboarded) !== '1');
   const [stage, setStage] = useState<'splash' | 'intro' | 'welcome'>(firstVisit ? 'splash' : 'welcome');
 
+  const leaveSplash = () => {
+    local.set(keys.onboarded, '1');
+    setStage('intro');
+  };
+
   useEffect(() => {
     if (stage !== 'splash') return;
-    const t = window.setTimeout(() => {
-      setStage('intro');
-      local.set(keys.onboarded, '1');
-    }, SPLASH_MS);
+    const t = window.setTimeout(leaveSplash, SPLASH_MS);
     return () => window.clearTimeout(t);
   }, [stage]);
 
-  if (stage === 'splash') return <Splash />;
+  if (stage === 'splash') return <Splash onSkip={leaveSplash} />;
   if (stage === 'intro') return <Intro />;
   return <Welcome />;
 }

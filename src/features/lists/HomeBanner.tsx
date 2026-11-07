@@ -1,8 +1,11 @@
 import { lazy, Suspense } from 'react';
 import bannerImg from '@/assets/home/banner-groceries.webp';
 
+import { canRenderShaders } from '@/lib/shaderSupport';
+
 const BannerCaustic = lazy(() => import('./BannerCaustic'));
-const hasWebGPU = typeof navigator !== 'undefined' && 'gpu' in navigator;
+
+const showShader = canRenderShaders();
 
 /**
  * Screen 13 banner: green Message Card with the Figma "Water caustic"
@@ -16,7 +19,7 @@ export function HomeBanner({ onStart }: { onStart: () => void }) {
       onClick={onStart}
       className="focus-ring relative isolate flex h-[98px] w-full items-center overflow-hidden rounded-18 bg-brand-strong px-4 py-3.5 text-left"
     >
-      {hasWebGPU ? (
+      {showShader ? (
         <Suspense fallback={null}>
           <BannerCaustic />
         </Suspense>

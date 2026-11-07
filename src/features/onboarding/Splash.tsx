@@ -1,17 +1,25 @@
 import { lazy, Suspense } from 'react';
 import { Logo } from '@/components/Logo';
 
+import { canRenderShaders } from '@/lib/shaderSupport';
+
 const SplashNebula = lazy(() => import('./SplashNebula'));
-const hasWebGPU = typeof navigator !== 'undefined' && 'gpu' in navigator;
+
+const showShader = canRenderShaders();
 
 /**
- * Screen 01 Splash: green gradient, Nebula shader (WebGPU browsers only; the
- * gradient alone shows elsewhere), white logo tile and wordmark.
+ * Screen 01 Splash: green gradient, Nebula shader (desktop WebGPU only, see
+ * shaderSupport.ts), white logo tile and wordmark. Tap to skip.
  */
-export function Splash() {
+export function Splash({ onSkip }: { onSkip?: () => void }) {
   return (
-    <div className="relative isolate flex min-h-dvh flex-col items-center justify-center gap-[22px] overflow-hidden splash-gradient" role="img" aria-label="Shoppa">
-      {hasWebGPU ? (
+    <div
+      className="relative isolate flex min-h-dvh flex-col items-center justify-center gap-[22px] overflow-hidden splash-gradient"
+      role="img"
+      aria-label="Shoppa"
+      onClick={onSkip}
+    >
+      {showShader ? (
         <Suspense fallback={null}>
           <SplashNebula />
         </Suspense>

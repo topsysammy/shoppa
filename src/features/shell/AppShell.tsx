@@ -6,7 +6,6 @@ import { openSheet } from '@/features/lists/sheetStore';
 import { SyncBanner } from './SyncBanner';
 import { StorageWarning } from './StorageWarning';
 import { ToastHost } from './ToastHost';
-import { UpdateToast } from './UpdateToast';
 import { useShortcuts } from './useShortcuts';
 import { useUnreadCount } from '@/features/notifications/data';
 import { useMyProfile } from '@/features/lists/data';
@@ -75,7 +74,6 @@ export function AppShell({ children, bare = false }: { children: ReactNode; bare
         <Sheets />
       </Suspense>
       <ToastHost />
-      <UpdateToast />
       <StorageWarning />
     </div>
   );
