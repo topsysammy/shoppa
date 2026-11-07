@@ -1,0 +1,222 @@
+/*
+ * Shoppa design tokens.
+ * Source: Figma file b77OFtZwzJT6EpqpWyEefK, page "Foundations & Components"
+ * (local variables `ml/*`, text styles and effects). Names keep the Figma
+ * variable names (`--ml-*`) so design and code share one vocabulary.
+ *
+ * Brand colour follows the Figma screens (green), not the PRD v3 section 4
+ * ink + lime table. Decided with the product owner on 2026-11-07.
+ *
+ * Accessibility adjustments (PRD section 8: 4.5:1 text contrast):
+ *  - --ml-brand-strong is #158544 instead of Figma's #168A47 (white text on
+ *    #168A47 is 4.41:1; on #158544 it is 4.72:1). Every green surface that
+ *    carries text (buttons, toasts, message cards, active chips, ink avatars)
+ *    uses this token. Figma's brighter #1FA855 (3.1:1 with white) is kept for
+ *    icon-only fills such as the + button and checked checkboxes (3:1 rule).
+ *  - --ml-text-tertiary is #737378 instead of #8E8E93 (3.3:1 on white).
+ *
+ * Dark mode: Figma has no dark variables yet, only the Appearance preview on
+ * screen 57 (#111113 ground, #232326 surfaces, #F2F2F3 text). The remaining
+ * dark values are derived from those and checked for 4.5:1.
+ */
+
+:root,
+[data-theme='light'] {
+  color-scheme: light;
+
+  /* Text */
+  --ml-text-primary: #1c1c1e;
+  --ml-text-body: #3a3a3e;
+  --ml-text-secondary: #6b6b70;
+  --ml-text-tertiary: #737378;
+  --ml-text-inverse: #ffffff;
+  --ml-text-on-brand: #ffffff;
+
+  /* Backgrounds */
+  --ml-bg-surface: #ffffff;
+  --ml-bg-muted: #f2f2f3;
+  --ml-bg-selected: #e3e3e6;
+  --ml-bg-track: #ededef;
+  --ml-bg-ground: #f4f4f5;
+  --ml-canvas-from: #eaeaec;
+  --ml-canvas-to: #f7f7f8;
+  --ml-bg-scrim: rgb(20 20 31 / 0.4);
+
+  /* Borders */
+  --ml-border-default: #eeeef0;
+  --ml-border-strong: #e3e3e6;
+  --ml-border-check: #c7c7cc;
+  --ml-border-focus: #1c1c1e;
+  --ml-avatar-ring: #ffffff;
+
+  /* Brand */
+  --ml-brand: #1fa855;
+  --ml-brand-strong: #158544;
+  --ml-brand-text: #158544;
+  --ml-brand-progress: #158544;
+  --ml-brand-yellow: #ffd25c;
+  --ml-brand-on-yellow: #1c1c1e;
+
+  /* Status (PRD: colour carries status only) */
+  --ml-status-info: #3b6fd0;
+  --ml-status-alert: #c94a33;
+  --ml-status-done: #3d852c;
+  --ml-status-danger: #b3261e;
+  --ml-link: #6a4be0;
+
+  /* Avatar tones: background / initial colour */
+  --ml-avatar-blue: #d6e4ff;
+  --ml-avatar-blue-text: #23479c;
+  --ml-avatar-peach: #fcd9c4;
+  --ml-avatar-peach-text: #8a3b12;
+  --ml-avatar-lavender: #e6deff;
+  --ml-avatar-lavender-text: #4b33a8;
+  --ml-avatar-mint: #eef4d8;
+  --ml-avatar-mint-text: #4c6410;
+
+  /* Shop Item checked box (ink in Figma) */
+  --ml-shop-check-bg: #1c1c1e;
+  --ml-shop-check-fg: #ffffff;
+
+
+  /* Onboarding and success backgrounds (screens 02 and 12) */
+  --ml-hero-from: #d2eedd;
+  --ml-hero-via: #f7f8f2;
+  --ml-success-from: #f1f6df;
+  --ml-success-via: #f5f7ee;
+  --ml-halo: rgb(198 220 110 / 0.15);
+  --ml-halo-strong: rgb(198 220 110 / 0.35);
+  --ml-dot-idle: #d1d1d6;
+  --ml-code-bg: #f7f7f8;
+  --ml-code-border: #e6e6e8;
+  --ml-danger-tint: #fce9e6;
+  --ml-match: #e6f0c2;
+  --ml-splash-from: #1fa855;
+  --ml-splash-to: #1b7940;
+
+  /* Effects */
+  --ml-shadow-card: 0 2px 10px rgb(20 20 31 / 0.05);
+  --ml-shadow-fab: 0 8px 18px rgb(0 0 0 / 0.22);
+  --ml-shadow-overlay: 0 16px 48px rgb(20 20 31 / 0.18);
+  --ml-focus-ring: #1c1c1e;
+}
+
+/* Dark values, defined once and applied by both selectors below. */
+[data-theme='dark'] {
+  color-scheme: dark;
+  --ml-text-primary: #f2f2f3;
+  --ml-text-body: #d1d1d6;
+  --ml-text-secondary: #a8a8ad;
+  --ml-text-tertiary: #9a9a9f;
+  --ml-text-inverse: #1c1c1e;
+  --ml-text-on-brand: #ffffff;
+
+  --ml-bg-surface: #232326;
+  --ml-bg-muted: #2c2c30;
+  --ml-bg-selected: #3a3a3e;
+  --ml-bg-track: #3a3a3e;
+  --ml-bg-ground: #111113;
+  --ml-canvas-from: #111113;
+  --ml-canvas-to: #18181b;
+  --ml-bg-scrim: rgb(0 0 0 / 0.6);
+
+  --ml-border-default: #2f2f33;
+  --ml-border-strong: #3d3d42;
+  --ml-border-check: #6b6b70;
+  --ml-border-focus: #f2f2f3;
+  --ml-avatar-ring: #232326;
+
+  --ml-brand: #1fa855;
+  --ml-brand-strong: #158544;
+  --ml-brand-text: #4cc97a;
+  --ml-brand-progress: #1fa855;
+  --ml-brand-yellow: #ffd25c;
+  --ml-brand-on-yellow: #1c1c1e;
+
+  --ml-status-info: #3b6fd0;
+  --ml-status-alert: #c94a33;
+  --ml-status-done: #3d852c;
+  --ml-status-danger: #b3261e;
+  --ml-link: #a594ff;
+
+  --ml-avatar-blue: #24365e;
+  --ml-avatar-blue-text: #c9d9ff;
+  --ml-avatar-peach: #5a3020;
+  --ml-avatar-peach-text: #ffd5bd;
+  --ml-avatar-lavender: #362a66;
+  --ml-avatar-lavender-text: #ddd3ff;
+  --ml-avatar-mint: #33401a;
+  --ml-avatar-mint-text: #dfeab8;
+
+  --ml-shop-check-bg: #f2f2f3;
+  --ml-shop-check-fg: #1c1c1e;
+
+  --ml-hero-from: #0f2a1b;
+  --ml-hero-via: #141614;
+  --ml-success-from: #1d2410;
+  --ml-success-via: #16180f;
+  --ml-halo: rgb(198 220 110 / 0.1);
+  --ml-halo-strong: rgb(198 220 110 / 0.22);
+  --ml-dot-idle: #4a4a4f;
+  --ml-code-bg: #2c2c30;
+  --ml-code-border: #3d3d42;
+  --ml-danger-tint: #3d1f1c;
+  --ml-match: #3b4419;
+
+  --ml-shadow-card: 0 2px 10px rgb(0 0 0 / 0.35);
+  --ml-shadow-fab: 0 8px 18px rgb(0 0 0 / 0.5);
+  --ml-shadow-overlay: 0 16px 48px rgb(0 0 0 / 0.55);
+  --ml-focus-ring: #f2f2f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --ml-text-primary: #f2f2f3;
+    --ml-text-body: #d1d1d6;
+    --ml-text-secondary: #a8a8ad;
+    --ml-text-tertiary: #9a9a9f;
+    --ml-text-inverse: #1c1c1e;
+    --ml-bg-surface: #232326;
+    --ml-bg-muted: #2c2c30;
+    --ml-bg-selected: #3a3a3e;
+    --ml-bg-track: #3a3a3e;
+    --ml-bg-ground: #111113;
+    --ml-canvas-from: #111113;
+    --ml-canvas-to: #18181b;
+    --ml-bg-scrim: rgb(0 0 0 / 0.6);
+    --ml-border-default: #2f2f33;
+    --ml-border-strong: #3d3d42;
+    --ml-border-check: #6b6b70;
+    --ml-border-focus: #f2f2f3;
+    --ml-avatar-ring: #232326;
+    --ml-brand-text: #4cc97a;
+    --ml-brand-progress: #1fa855;
+    --ml-link: #a594ff;
+    --ml-avatar-blue: #24365e;
+    --ml-avatar-blue-text: #c9d9ff;
+    --ml-avatar-peach: #5a3020;
+    --ml-avatar-peach-text: #ffd5bd;
+    --ml-avatar-lavender: #362a66;
+    --ml-avatar-lavender-text: #ddd3ff;
+    --ml-avatar-mint: #33401a;
+    --ml-avatar-mint-text: #dfeab8;
+    --ml-shop-check-bg: #f2f2f3;
+    --ml-shop-check-fg: #1c1c1e;
+    --ml-hero-from: #0f2a1b;
+    --ml-hero-via: #141614;
+    --ml-success-from: #1d2410;
+    --ml-success-via: #16180f;
+    --ml-halo: rgb(198 220 110 / 0.1);
+    --ml-halo-strong: rgb(198 220 110 / 0.22);
+    --ml-dot-idle: #4a4a4f;
+    --ml-code-bg: #2c2c30;
+    --ml-code-border: #3d3d42;
+    --ml-danger-tint: #3d1f1c;
+    --ml-match: #3b4419;
+    --ml-shadow-card: 0 2px 10px rgb(0 0 0 / 0.35);
+    --ml-shadow-fab: 0 8px 18px rgb(0 0 0 / 0.5);
+    --ml-shadow-overlay: 0 16px 48px rgb(0 0 0 / 0.55);
+    --ml-focus-ring: #f2f2f3;
+  }
+}

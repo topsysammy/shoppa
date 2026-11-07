@@ -1,0 +1,241 @@
+<svg width="760" height="152" viewBox="0 0 760 152" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="760" height="152" fill="#1E1E1E"/>
+<g id="Icons">
+<rect width="760" height="152" rx="24" fill="white"/>
+<g id="icon/home">
+<g id="Group">
+<path id="Vector" d="M27 34.5L36 27L45 34.5V44C45 44.2652 44.8946 44.5196 44.7071 44.7071C44.5196 44.8946 44.2652 45 44 45H39V39H33V45H28C27.7348 45 27.4804 44.8946 27.2929 44.7071C27.1054 44.5196 27 44.2652 27 44V34.5Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/list">
+<g id="Group_2">
+<path id="Vector_2" d="M73 30H84M73 36H84M73 42H84M68 30H68.01M68 36H68.01M68 42H68.01" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/plus">
+<g id="Group_3">
+<path id="Vector_3" d="M116 29V43M109 36H123" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/users">
+<g id="Group_4">
+<path id="Vector_4" d="M153 35.5C154.933 35.5 156.5 33.933 156.5 32C156.5 30.067 154.933 28.5 153 28.5C151.067 28.5 149.5 30.067 149.5 32C149.5 33.933 151.067 35.5 153 35.5Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_5" d="M146.5 44C146.5 42.2761 147.185 40.6228 148.404 39.4038C149.623 38.1848 151.276 37.5 153 37.5C154.724 37.5 156.377 38.1848 157.596 39.4038C158.815 40.6228 159.5 42.2761 159.5 44M160 28.5C160.928 28.5 161.818 28.8687 162.475 29.5251C163.131 30.1815 163.5 31.0717 163.5 32C163.5 32.9283 163.131 33.8185 162.475 34.4749C161.818 35.1313 160.928 35.5 160 35.5M162 38C163.134 38.5136 164.079 39.367 164.707 40.442C165.334 41.517 165.611 42.7604 165.5 44" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/user">
+<g id="Group_5">
+<path id="Vector_6" d="M196 36C198.209 36 200 34.2091 200 32C200 29.7909 198.209 28 196 28C193.791 28 192 29.7909 192 32C192 34.2091 193.791 36 196 36Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_7" d="M188 45C188 42.8783 188.843 40.8434 190.343 39.3431C191.843 37.8429 193.878 37 196 37C198.122 37 200.157 37.8429 201.657 39.3431C203.157 40.8434 204 42.8783 204 45" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/bell">
+<g id="Group_6">
+<path id="Vector_8" d="M234 45H238M230 32C230 30.4087 230.632 28.8826 231.757 27.7574C232.883 26.6321 234.409 26 236 26C237.591 26 239.117 26.6321 240.243 27.7574C241.368 28.8826 242 30.4087 242 32C242 39 245 41 245 41H227C227 41 230 39 230 32Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/search">
+<g id="Group_7">
+<path id="Vector_9" d="M275 42C278.866 42 282 38.866 282 35C282 31.134 278.866 28 275 28C271.134 28 268 31.134 268 35C268 38.866 271.134 42 275 42Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_10" d="M284 44L280 40" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/back">
+<g id="Group_8">
+<path id="Vector_11" d="M319 29L312 36L319 43" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/chevron-right">
+<g id="Group_9">
+<path id="Vector_12" d="M353 29L360 36L353 43" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/chevron-down">
+<g id="Group_10">
+<path id="Vector_13" d="M390 33L396 39L402 33" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/close">
+<g id="Group_11">
+<path id="Vector_14" d="M430 30L442 42M442 30L430 42" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/more">
+<g id="Group_12">
+<path id="Vector_15" d="M469 36H469.01M476 36H476.01M483 36H483.01" stroke="#1C1C1E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/share">
+<g id="Group_13">
+<path id="Vector_16" d="M522 32C523.657 32 525 30.6569 525 29C525 27.3431 523.657 26 522 26C520.343 26 519 27.3431 519 29C519 30.6569 520.343 32 522 32Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_17" d="M510 39C511.657 39 513 37.6569 513 36C513 34.3431 511.657 33 510 33C508.343 33 507 34.3431 507 36C507 37.6569 508.343 39 510 39Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_18" d="M522 46C523.657 46 525 44.6569 525 43C525 41.3431 523.657 40 522 40C520.343 40 519 41.3431 519 43C519 44.6569 520.343 46 522 46Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_19" d="M512.6 37.5L519.4 41.5M519.4 30.5L512.6 34.5" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/bag">
+<g id="Group_14">
+<path id="Vector_20" d="M553 32V30C553 29.2044 553.316 28.4413 553.879 27.8787C554.441 27.3161 555.204 27 556 27C556.796 27 557.559 27.3161 558.121 27.8787C558.684 28.4413 559 29.2044 559 30V32M549 32H563L562 44H550L549 32Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/bag-check">
+<g id="Group_15">
+<path id="Vector_21" d="M593 32V30C593 29.2044 593.316 28.4413 593.879 27.8787C594.441 27.3161 595.204 27 596 27C596.796 27 597.559 27.3161 598.121 27.8787C598.684 28.4413 599 29.2044 599 30V32M589 32H603L602 44H590L589 32Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_22" d="M593 38L595 40L599 36" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/comment">
+<g id="Group_16">
+<path id="Vector_23" d="M628 29H644V40H632L628 44V29Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/check">
+<g id="Group_17">
+<path id="Vector_24" d="M669 36.5L673.5 41L683 31.5" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/trash">
+<g id="Group_18">
+<path id="Vector_25" d="M708 31H724M714 35V41M718 35V41M710 31L711 44H721L722 31M713 31V28H719V31" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/edit">
+<g id="Group_19">
+<path id="Vector_26" d="M38 70L42 74M28 84H32L43 73L39 69L28 80V84Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/link">
+<g id="Group_20">
+<path id="Vector_27" d="M74 78C74.3722 78.3779 74.8158 78.6781 75.3051 78.8829C75.7944 79.0878 76.3196 79.1933 76.85 79.1933C77.3804 79.1933 77.9056 79.0878 78.3949 78.8829C78.8842 78.6781 79.3278 78.3779 79.7 78L82.7 75C83.4559 74.2441 83.8805 73.219 83.8805 72.15C83.8805 71.081 83.4559 70.0559 82.7 69.3C81.9441 68.5441 80.919 68.1195 79.85 68.1195C78.781 68.1195 77.7559 68.5441 77 69.3L76 70.3M78 74C77.6278 73.6221 77.1842 73.3219 76.6949 73.1171C76.2056 72.9122 75.6804 72.8067 75.15 72.8067C74.6196 72.8067 74.0944 72.9122 73.6051 73.1171C73.1158 73.3219 72.6722 73.6221 72.3 74L69.3 77C68.5441 77.7559 68.1195 78.781 68.1195 79.85C68.1195 80.919 68.5441 81.9441 69.3 82.7C70.0559 83.4559 71.081 83.8805 72.15 83.8805C73.219 83.8805 74.2441 83.4559 75 82.7L76 81.7" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/mail">
+<g id="Group_21">
+<path id="Vector_28" d="M123 69H109C107.895 69 107 69.8954 107 71V81C107 82.1046 107.895 83 109 83H123C124.105 83 125 82.1046 125 81V71C125 69.8954 124.105 69 123 69Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_29" d="M107 71L116 77L125 71" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/whatsapp">
+<g id="Group_22">
+<path id="Vector_30" d="M148 84L149.3 80C148.415 78.466 148.065 76.6819 148.303 74.9273C148.541 73.1726 149.355 71.5465 150.616 70.3039C151.878 69.0613 153.516 68.2723 155.274 68.0607C157.032 67.849 158.811 68.2266 160.331 69.1343C161.851 70.042 163.028 71.4285 163.676 73.0766C164.323 74.7246 164.406 76.5409 163.911 78.241C163.415 79.9411 162.37 81.4288 160.939 82.471C159.507 83.5132 157.77 84.0509 156 84C154.636 84.0046 153.293 83.6604 152.1 83L148 84Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/clock">
+<g id="Group_23">
+<path id="Vector_31" d="M196 85C200.971 85 205 80.9706 205 76C205 71.0294 200.971 67 196 67C191.029 67 187 71.0294 187 76C187 80.9706 191.029 85 196 85Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_32" d="M196 71V76L199 78" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/refresh">
+<g id="Group_24">
+<path id="Vector_33" d="M244 75C243.98 73.1504 243.32 71.3648 242.132 69.9471C240.943 68.5295 239.301 67.5675 237.483 67.2247C235.665 66.8819 233.785 67.1797 232.162 68.0672C230.539 68.9547 229.274 70.3772 228.582 72.0926C227.889 73.808 227.813 75.7102 228.366 77.4755C228.918 79.2408 230.065 80.7601 231.612 81.7749C233.158 82.7896 235.009 83.2371 236.848 83.0411C238.687 82.8451 240.402 82.0178 241.7 80.7M237 75H244V68" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/wifi-off">
+<g id="Group_25">
+<path id="Vector_34" d="M266 66L286 86M272.5 80.5C273.435 79.5839 274.691 79.0707 276 79.0707C277.309 79.0707 278.565 79.5839 279.5 80.5M269 76.5C270.412 75.0644 272.224 74.0885 274.2 73.7M283 76.5C282.288 75.8181 281.479 75.2453 280.6 74.8M276 84H276.01" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/alert">
+<g id="Group_26">
+<path id="Vector_35" d="M316 74V79M316 82H316.01M316 67L326 85H306L316 67Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/shield">
+<g id="Group_27">
+<path id="Vector_36" d="M356 67L364 70V76C364 81 360.5 84 356 85C351.5 84 348 81 348 76V70L356 67Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/help">
+<g id="Group_28">
+<path id="Vector_37" d="M396 85C400.971 85 405 80.9706 405 76C405 71.0294 400.971 67 396 67C391.029 67 387 71.0294 387 76C387 80.9706 391.029 85 396 85Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_38" d="M393.5 73C393.566 72.337 393.893 71.7274 394.409 71.3055C394.925 70.8835 395.587 70.6837 396.25 70.75C396.913 70.8163 397.523 71.1433 397.945 71.659C398.367 72.1747 398.566 72.837 398.5 73.5C398.5 75.5 396 75.5 396 77.5M396 81H396.01" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/moon">
+<g id="Group_29">
+<path id="Vector_39" d="M444 78C442.61 78.428 441.13 78.469 439.718 78.1185C438.307 77.7681 437.017 77.0395 435.989 76.0111C434.96 74.9827 434.232 73.6934 433.881 72.2819C433.531 70.8703 433.572 69.39 434 68C432.682 68.4059 431.491 69.1457 430.543 70.1476C429.595 71.1495 428.922 72.3795 428.59 73.7181C428.258 75.0568 428.277 76.4586 428.646 77.7875C429.016 79.1164 429.722 80.3273 430.697 81.3026C431.673 82.2779 432.884 82.9845 434.212 83.3537C435.541 83.723 436.943 83.7424 438.282 83.41C439.621 83.0777 440.85 82.4049 441.852 81.457C442.854 80.5091 443.594 79.3182 444 78Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/logout">
+<g id="Group_30">
+<path id="Vector_40" d="M479 68H483V84H479M474 80L470 76L474 72M470 76H481" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/ruler">
+<g id="Group_31">
+<path id="Vector_41" d="M512 75L514 77M515 72L517 74M508 79L519 68L524 73L513 84L508 79Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/settings">
+<g id="Group_32">
+<path id="Vector_42" d="M556 79C557.657 79 559 77.6569 559 76C559 74.3431 557.657 73 556 73C554.343 73 553 74.3431 553 76C553 77.6569 554.343 79 556 79Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_43" d="M556 66V69M556 83V86M548.2 68.2L550.3 70.3M561.7 81.7L563.8 83.8M546 76H549M563 76H566M548.2 83.8L550.3 81.7M561.7 70.3L563.8 68.2" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/filter">
+<g id="Group_33">
+<path id="Vector_44" d="M588 70H604M591 76H601M594 82H598" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/gift">
+<g id="Group_34">
+<path id="Vector_45" d="M644 72H628C627.448 72 627 72.4477 627 73V75C627 75.5523 627.448 76 628 76H644C644.552 76 645 75.5523 645 75V73C645 72.4477 644.552 72 644 72Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_46" d="M629 76V84H643V76M636 72V84" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/leaf">
+<g id="Group_35">
+<path id="Vector_47" d="M670 84C678 84 684 79 684 69C674 69 669 75 669 83L676 76" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/box">
+<g id="Group_36">
+<path id="Vector_48" d="M716 85L725 81V71L716 67L707 71V81L716 85ZM707 71L716 75M725 71L716 75M716 85V75" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/broom">
+<g id="Group_37">
+<path id="Vector_49" d="M38 107L34 116M30 116H38L40 125H28L30 116Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/lock">
+<g id="Group_38">
+<path id="Vector_50" d="M81 115H71C69.8954 115 69 115.895 69 117V123C69 124.105 69.8954 125 71 125H81C82.1046 125 83 124.105 83 123V117C83 115.895 82.1046 115 81 115Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_51" d="M72 115V112C72 110.939 72.4214 109.922 73.1716 109.172C73.9217 108.421 74.9391 108 76 108C77.0609 108 78.0783 108.421 78.8284 109.172C79.5786 109.922 80 110.939 80 112V115" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/camera">
+<g id="Group_39">
+<path id="Vector_52" d="M108 112H111L113 109H119L121 112H124V123H108V112Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_53" d="M116 120.5C117.933 120.5 119.5 118.933 119.5 117C119.5 115.067 117.933 113.5 116 113.5C114.067 113.5 112.5 115.067 112.5 117C112.5 118.933 114.067 120.5 116 120.5Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/external">
+<g id="Group_40">
+<path id="Vector_54" d="M164 114V108H158M164 108L155 117M162 118V124H148V110H154" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/arrow-right">
+<g id="Group_41">
+<path id="Vector_55" d="M189 116H203M197 122L203 116L197 110" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/minus">
+<g id="Group_42">
+<path id="Vector_56" d="M229 116H243" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/eye">
+<g id="Group_43">
+<path id="Vector_57" d="M266 116C266 116 269.5 109 276 109C282.5 109 286 116 286 116C286 116 282.5 123 276 123C269.5 123 266 116 266 116Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_58" d="M276 119C277.657 119 279 117.657 279 116C279 114.343 277.657 113 276 113C274.343 113 273 114.343 273 116C273 117.657 274.343 119 276 119Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+<g id="icon/apple">
+<g id="Group_44">
+<path id="Vector_59" d="M319 108C317.5 108 316 109 316 111M320.5 112.5C319 111.5 317.5 111.5 316 112.5C314.5 111.5 313 111.5 311.5 112.5C309 114 309 118 311 121.5C312 123.3 313.2 124.5 314.5 124C315.5 123.6 316.5 123.6 317.5 124C318.8 124.5 320 123.3 321 121.5C321.5 120.6 321.8 119.8 322 119C320 118 319.5 115 321.5 112.5H320.5Z" stroke="#1C1C1E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</g>
+</g>
+</svg>

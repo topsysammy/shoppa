@@ -1,0 +1,230 @@
+@import 'tailwindcss';
+@import './tokens.css';
+
+/* Dark variant follows the data-theme attribute and the system setting. */
+@custom-variant dark {
+  &:where([data-theme='dark'], [data-theme='dark'] *) {
+    @slot;
+  }
+  @media (prefers-color-scheme: dark) {
+    &:where(:root:not([data-theme='light']), :root:not([data-theme='light']) *):not(
+        :where([data-theme='light'], [data-theme='light'] *)
+      ) {
+      @slot;
+    }
+  }
+}
+
+/* Figtree, self-hosted latin subset, one variable file for 400-700. */
+@font-face {
+  font-family: 'Figtree';
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('/fonts/figtree-latin-var.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308,
+    U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*
+ * Tailwind theme mapped onto the CSS variables. `inline` makes utilities
+ * reference var(--ml-*) at the point of use, so a [data-theme] wrapper
+ * re-themes everything inside it (the component gallery relies on this).
+ */
+@theme inline {
+  --color-*: initial;
+  --color-transparent: transparent;
+  --color-current: currentColor;
+  --color-white: #ffffff;
+
+  --color-ink: var(--ml-text-primary);
+  --color-body: var(--ml-text-body);
+  --color-secondary: var(--ml-text-secondary);
+  --color-tertiary: var(--ml-text-tertiary);
+  --color-inverse: var(--ml-text-inverse);
+  --color-on-brand: var(--ml-text-on-brand);
+
+  --color-surface: var(--ml-bg-surface);
+  --color-muted: var(--ml-bg-muted);
+  --color-selected: var(--ml-bg-selected);
+  --color-track: var(--ml-bg-track);
+  --color-ground: var(--ml-bg-ground);
+  --color-canvas-from: var(--ml-canvas-from);
+  --color-canvas-to: var(--ml-canvas-to);
+  --color-scrim: var(--ml-bg-scrim);
+
+  --color-line: var(--ml-border-default);
+  --color-line-strong: var(--ml-border-strong);
+  --color-line-check: var(--ml-border-check);
+  --color-line-focus: var(--ml-border-focus);
+  --color-avatar-ring: var(--ml-avatar-ring);
+
+  --color-brand: var(--ml-brand);
+  --color-brand-strong: var(--ml-brand-strong);
+  --color-brand-text: var(--ml-brand-text);
+  --color-progress: var(--ml-brand-progress);
+  --color-yellow: var(--ml-brand-yellow);
+  --color-on-yellow: var(--ml-brand-on-yellow);
+
+  --color-info: var(--ml-status-info);
+  --color-alert: var(--ml-status-alert);
+  --color-done: var(--ml-status-done);
+  --color-danger: var(--ml-status-danger);
+  --color-link: var(--ml-link);
+
+  --color-avatar-blue: var(--ml-avatar-blue);
+  --color-avatar-blue-text: var(--ml-avatar-blue-text);
+  --color-avatar-peach: var(--ml-avatar-peach);
+  --color-avatar-peach-text: var(--ml-avatar-peach-text);
+  --color-avatar-lavender: var(--ml-avatar-lavender);
+  --color-avatar-lavender-text: var(--ml-avatar-lavender-text);
+  --color-avatar-mint: var(--ml-avatar-mint);
+  --color-avatar-mint-text: var(--ml-avatar-mint-text);
+
+  --color-shop-check: var(--ml-shop-check-bg);
+  --color-shop-check-fg: var(--ml-shop-check-fg);
+  --color-dot-idle: var(--ml-dot-idle);
+  --color-danger-tint: var(--ml-danger-tint);
+  --color-match: var(--ml-match);
+  --color-code: var(--ml-code-bg);
+  --color-code-line: var(--ml-code-border);
+  --color-halo: var(--ml-halo);
+  --color-halo-strong: var(--ml-halo-strong);
+
+  /* Radius: Figma ml/radius-sm 12, md 16, lg 20, plus 28 and 32 (sheets) */
+  --radius-12: 12px;
+  --radius-16: 16px;
+  --radius-18: 18px;
+  --radius-20: 20px;
+  --radius-28: 28px;
+  --radius-32: 32px;
+
+  --shadow-card: var(--ml-shadow-card);
+  --shadow-fab: var(--ml-shadow-fab);
+  --shadow-overlay: var(--ml-shadow-overlay);
+
+  --font-sans: 'Figtree', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --breakpoint-tablet: 640px;
+  --breakpoint-desktop: 1024px;
+}
+
+/* 11 Figma text styles as utilities: type-<style> */
+@utility type-display {
+  font-size: 28px;
+  line-height: 34px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+@utility type-title {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 600;
+}
+@utility type-heading {
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 600;
+}
+@utility type-shop {
+  /* Shop Item name, Shopping Mode */
+  font-size: 19px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@utility type-body-strong {
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 600;
+}
+@utility type-body-medium {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 500;
+}
+@utility type-body {
+  font-size: 15px;
+  line-height: 22px;
+  font-weight: 400;
+}
+@utility type-label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+}
+@utility type-caption {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+}
+@utility type-small {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+@utility type-small-strong {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+}
+
+/* Visible focus everywhere (PRD section 8). Mouse clicks don't show it. */
+@utility focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--ml-focus-ring);
+    outline-offset: 2px;
+  }
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+  }
+  body {
+    @apply bg-ground font-sans text-ink type-body antialiased;
+    min-height: 100dvh;
+  }
+  :focus-visible {
+    outline: 2px solid var(--ml-focus-ring);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@utility canvas-gradient {
+  background-image: linear-gradient(to bottom, var(--ml-canvas-from), var(--ml-canvas-to));
+}
+
+@utility hero-gradient {
+  background-image: linear-gradient(to bottom, var(--ml-hero-from), var(--ml-hero-via) 55%, var(--ml-canvas-to));
+}
+
+@utility success-gradient {
+  background-image: linear-gradient(to bottom, var(--ml-success-from), var(--ml-success-via) 40%, var(--ml-canvas-to));
+}
+
+@utility splash-gradient {
+  background-image: linear-gradient(to bottom, var(--ml-splash-from) 42.773%, var(--ml-splash-to) 135.72%);
+}
+
+@utility safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+/* Appearance > Larger text in Shopping Mode */
+.shop-large .type-shop {
+  font-size: 22px;
+  line-height: 26px;
+}
+.shop-large [role='checkbox'] .type-small {
+  font-size: 14px;
+  line-height: 18px;
+}
