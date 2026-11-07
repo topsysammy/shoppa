@@ -22,6 +22,8 @@ or with the Supabase CLI: `supabase link --project-ref <ref>` then `supabase db 
 | `20261107000004_sharing.sql` | 5 | `invites` + `create_invite` / `revoke_invites` / `invite_preview` / `accept_invite` (7-day, server-checked, rate limited); remove member and leave; co-members see names; item and member activity triggers |
 | `20261107000005_notifications.sql` | 6 | `notification_settings`, `push_subscriptions`, `notifications` inbox; activity fan-out with 10-minute coalescing; realtime |
 | `20261107000006_profile_settings.sql` | 7 | Units (metric / imperial, `unit_prefs`), profile `updated_at`, default-list check, owner transfer by service role only, `account_deletion_summary()` |
+| `20261107000007_push_webhook.sql` | 6 | trigger that calls the `push` Edge Function (URL and secret from Vault) |
+| `20261107000008_lock_down_functions.sql` | fix | revoke EXECUTE from PUBLIC; grant only the RPCs the app calls |
 
 Optional: enable **pg_cron** (Database > Extensions) *before* running migration 2 so the daily purge of
 soft-deleted rows is scheduled automatically. If you enable it later, run:
@@ -43,7 +45,7 @@ soft-deleted rows is scheduled automatically. If you enable it later, run:
 - Password: minimum length **8**, required characters **letters and digits** (matches the sign-up rule).
 - Secure password change: on.
 
-**Email Templates** — the links point at `/auth/confirm` with a `token_hash`, so a link opened in another
+**Email Templates** (free plan: only after you set up custom SMTP) — the links point at `/auth/confirm` with a `token_hash`, so a link opened in another
 browser or on another device still works (A7).
 - Confirm signup: paste `templates/confirm-signup.html`, subject `Your Shoppa code is {{ .Token }}`.
 - Reset Password: paste `templates/reset-password.html`, subject `Reset your Shoppa password`.
@@ -68,8 +70,9 @@ the built-in sender is limited to a few emails per hour.
    `PUSH_WEBHOOK_SECRET=<long random string>`.
 4. Deploy the function: `supabase functions deploy push --no-verify-jwt`
    (the webhook authenticates with the secret header instead of a user JWT).
-5. Database > Webhooks > Create: table `notifications`, event **Insert**, type **Supabase Edge
-   Functions**, function `push`, HTTP header `x-webhook-secret: <PUSH_WEBHOOK_SECRET>`.
+5. Migration 7 calls the function from a trigger. Give it the URL and secret once, in SQL Editor:
+   `select vault.create_secret('<PUSH_WEBHOOK_SECRET>', 'push_webhook_secret');`
+   `select vault.create_secret('https://<ref>.supabase.co/functions/v1/push', 'push_function_url');`
 
 Coalesced updates ("Mum added 3 items") don't create new rows, so a burst sends one push.
 iOS delivers push only when Shoppa is installed to the Home Screen (16.4+); everyone has the in-app inbox.
